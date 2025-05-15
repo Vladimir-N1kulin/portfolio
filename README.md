@@ -1,2 +1,2 @@
 # portfolio
-website showcasing projects and experience
+My website showcasing projects and experience using devops
