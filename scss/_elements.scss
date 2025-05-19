@@ -1,205 +1,201 @@
 /*============== Elements Area css ================*/
 
-.mb-20{
-	margin-bottom: 20px;
+.mb-20 {
+  margin-bottom: 20px;
 }
-.mb-30{
-	margin-bottom: 30px;
+.mb-30 {
+  margin-bottom: 30px;
 }
 
-.sample-text-area{
-	padding: 100px 0px;
-	.title_color{
-		margin-bottom: 30px;
-	}
-	p{
-		line-height: 26px;
-		b{
-			font-weight: bold;
-			color: $primary-color;
-		}
-		i{
-			color: $primary-color;
-			font-style: italic;
-		}
-		sup{
-			color: $primary-color;
-			font-style: italic;
-		}
-		sub{
-			color: $primary-color;
-			font-style: italic;
-		}
-		del{
-			color: $primary-color;
-		}
-		u{
-			color: $primary-color;
-		}
-	}
+.sample-text-area {
+  padding: 100px 0px;
+  .title_color {
+    margin-bottom: 30px;
+  }
+  p {
+    line-height: 26px;
+    b {
+      font-weight: bold;
+      color: $primary-color;
+    }
+    i {
+      color: $primary-color;
+      font-style: italic;
+    }
+    sup {
+      color: $primary-color;
+      font-style: italic;
+    }
+    sub {
+      color: $primary-color;
+      font-style: italic;
+    }
+    del {
+      color: $primary-color;
+    }
+    u {
+      color: $primary-color;
+    }
+  }
 }
 
 /*============== End Elements Area css ================*/
 
 /*==============Elements Button Area css ================*/
-.elements_button{
-	.title_color{
-		margin-bottom: 30px;
-		color: $title-color;
-	}
+.elements_button {
+  .title_color {
+    margin-bottom: 30px;
+    color: $title-color;
+  }
 }
-.title_color{
-	color: $title-color;
+.title_color {
+  color: $title-color;
 }
-.button-group-area{
-	margin-top: 15px;
-	&:nth-child(odd){
-		margin-top: 40px;
-	}
-	&:first-child{
-		margin-top: 0px;
-	}
-	.theme_btn{
-		margin-right: 10px;
-	}
-	.link{
-		text-decoration: underline;
-		color: $title-color;
-		background: transparent;
-		&:hover{
-			color: #fff;
-		}
-	}
-	.disable{
-		background: transparent;
-		color: #007bff;
-		cursor: not-allowed;
-		&:before{
-			display: none;
-		}
-	}
+.button-group-area {
+  margin-top: 15px;
+  &:nth-child(odd) {
+    margin-top: 40px;
+  }
+  &:first-child {
+    margin-top: 0px;
+  }
+  .theme_btn {
+    margin-right: 10px;
+  }
+  .link {
+    text-decoration: underline;
+    color: $title-color;
+    background: transparent;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .disable {
+    background: transparent;
+    color: #007bff;
+    cursor: not-allowed;
+    &:before {
+      display: none;
+    }
+  }
 }
-.primary{
-	background: #52c5fd;
-	&:before{
-		background: #2faae6;
-	}
+.primary {
+  background: #52c5fd;
+  &:before {
+    background: #2faae6;
+  }
 }
-.success{
-	background: #4cd3e3;
-	&:before{
-		background: #2ebccd;
-	}
+.success {
+  background: #4cd3e3;
+  &:before {
+    background: #2ebccd;
+  }
 }
-.info{
-	background: #38a4ff;
-	&:before{
-		background: #298cdf;
-	}
+.info {
+  background: #38a4ff;
+  &:before {
+    background: #298cdf;
+  }
 }
-.warning{
-	background: #f4e700;
-	&:before{
-		background: #e1d608;
-	}
+.warning {
+  background: #f4e700;
+  &:before {
+    background: #e1d608;
+  }
 }
-.danger{
-	background: #f54940;
-	&:before{
-		background: #e13b33;
-	}
+.danger {
+  background: #f54940;
+  &:before {
+    background: #e13b33;
+  }
 }
-.border_btn{
-	
+.border_btn {
 }
-.primary-border{
-	background: transparent;
-	border: 1px solid #52c5fd;
-	color: #52c5fd;
-	&:before{
-		background: #52c5fd;
-	}
+.primary-border {
+  background: transparent;
+  border: 1px solid #52c5fd;
+  color: #52c5fd;
+  &:before {
+    background: #52c5fd;
+  }
 }
-.success-border{
-	background: transparent;
-	border: 1px solid #4cd3e3;
-	color: #4cd3e3;
-	&:before{
-		background: #4cd3e3;
-	}
+.success-border {
+  background: transparent;
+  border: 1px solid #4cd3e3;
+  color: #4cd3e3;
+  &:before {
+    background: #4cd3e3;
+  }
 }
-.info-border{
-	background: transparent;
-	border: 1px solid #38a4ff;
-	color: #38a4ff;
-	&:before{
-		background: #38a4ff;
-	}
+.info-border {
+  background: transparent;
+  border: 1px solid #38a4ff;
+  color: #38a4ff;
+  &:before {
+    background: #38a4ff;
+  }
 }
-.warning-border{
-	background: #fff;
-	border: 1px solid #f4e700;
-	color: #f4e700;
-	&:before{
-		background: #f4e700;
-	}
+.warning-border {
+  background: #fff;
+  border: 1px solid #f4e700;
+  color: #f4e700;
+  &:before {
+    background: #f4e700;
+  }
 }
-.danger-border{
-	background: transparent;
-	border: 1px solid #f54940;
-	color: #f54940;
-	&:before{
-		background: #f54940;
-	}
+.danger-border {
+  background: transparent;
+  border: 1px solid #f54940;
+  color: #f54940;
+  &:before {
+    background: #f54940;
+  }
 }
-.link-border{
-	background: transparent;
-	border: 1px solid $primary-color;
-	color: $primary-color;
-	&:before{
-		background: $primary-color;
-	}
+.link-border {
+  background: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  &:before {
+    background: $primary-color;
+  }
 }
-.radius{
-	border-radius: 3px;
+.radius {
+  border-radius: 3px;
 }
-.circle{
-	border-radius: 20px;
+.circle {
+  border-radius: 20px;
 }
-.arrow{
-	span{
-		padding-left: 5px;
-	}
+.arrow {
+  span {
+    padding-left: 5px;
+  }
 }
-.e-large{
-	line-height: 50px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+.e-large {
+  line-height: 50px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-.large{
-	line-height: 45px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+.large {
+  line-height: 45px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-.medium{
-	line-height: 30px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+.medium {
+  line-height: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-.small{
-	line-height: 25px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+.small {
+  line-height: 25px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
-.general{
-	line-height: 38px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+.general {
+  line-height: 38px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 /*==============End Elements Button Area css ================*/
-
-
-
 
 /* =================================== */
 /*  Elements Page Styles
@@ -276,7 +272,6 @@
 
 /*---------- End Elements Page -------------*/
 
-
 .sample-text-area {
   padding: 100px 0 70px 0;
 }
@@ -306,7 +301,11 @@
   }
 }
 
-b, sup, sub, u, del {
+b,
+sup,
+sub,
+u,
+del {
   color: #f8b600;
 }
 
@@ -334,9 +333,12 @@ h6 {
   font-size: 14px;
 }
 
-
-
-.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6 {
   color: #777777;
 }
 
@@ -366,7 +368,7 @@ h6 {
   outline: none;
   line-height: 40px;
   padding: 0 30px;
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
@@ -634,7 +636,10 @@ h6 {
   display: flex;
 }
 
-.progress-table .table-head .serial, .progress-table .table-head .country, .progress-table .table-head .visit, .progress-table .table-head .percentage {
+.progress-table .table-head .serial,
+.progress-table .table-head .country,
+.progress-table .table-head .visit,
+.progress-table .table-head .percentage {
   color: #222222;
   line-height: 40px;
   text-transform: uppercase;
@@ -647,7 +652,10 @@ h6 {
   display: flex;
 }
 
-.progress-table .table-row .serial, .progress-table .table-row .country, .progress-table .table-row .visit, .progress-table .table-row .percentage {
+.progress-table .table-row .serial,
+.progress-table .table-row .country,
+.progress-table .table-row .visit,
+.progress-table .table-row .percentage {
   display: flex;
   align-items: center;
 }
@@ -712,7 +720,7 @@ h6 {
 }
 
 .single-gallery-image:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .list-style {
@@ -1098,14 +1106,15 @@ h6 {
   cursor: pointer;
   border: 1px solid #f1f1f1;
 }
-.single-defination{
-	h4{
-		color: $title-color;
-	}
+.single-defination {
+  h4 {
+    color: $title-color;
+  }
 }
 
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+  background: url(../img/elements/primary-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1143,7 +1152,8 @@ h6 {
 }
 
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+  background: url(../img/elements/success-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1186,7 +1196,8 @@ h6 {
 }
 
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+  background: url(../img/elements/disabled-check.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1224,7 +1235,8 @@ h6 {
 }
 
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/primary-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1262,7 +1274,8 @@ h6 {
 }
 
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/success-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1303,17 +1316,18 @@ h6 {
   cursor: not-allowed;
   z-index: 3;
 }
-.unordered-list{
-	list-style: none;
-	padding: 0px;
-	margin: 0px;
+.unordered-list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
-.ordered-list{
-	list-style: none;
-	padding: 0px;
+.ordered-list {
+  list-style: none;
+  padding: 0px;
 }
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+  background: url(../img/elements/disabled-radio.png) no-repeat center
+    center/cover;
   border: none;
 }
 
@@ -1399,8 +1413,8 @@ h6 {
   width: 100%;
   padding: 10px 0 10px 0px;
 }
-.mt-10{
-	margin-top: 10px;
+.mt-10 {
+  margin-top: 10px;
 }
 .form-select .nice-select .list .option {
   font-weight: 300;
@@ -1432,7 +1446,3 @@ h6 {
 .form-select .nice-select::after {
   right: 20px;
 }
-
-
-
-
