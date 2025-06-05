@@ -4172,3 +4172,68 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+/* Add after the existing portfolio_area styles */
+.portfolio_area {
+  padding: 120px 0;
+  padding-bottom: 1024px; /* adjust as needed */
+  margin-bottom: 120px;
+  position: relative;
+}
+
+/* Optionally enforce same card size */
+.portfolio_box {
+  /* Remove height:100% if present so height adjusts to content */
+  min-height: 350px; /* adjust as needed */
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.single_portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.single_portfolio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.short_info {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.short_info h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.short_info p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 991px) {
+  .portfolio_area {
+    padding: 60px 0;
+    margin-bottom: 30px;
+  }
+}
