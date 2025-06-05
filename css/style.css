@@ -208,6 +208,7 @@ button:focus {
   background: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
   background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -4172,25 +4173,26 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
-/* Add after the existing portfolio_area styles */
+/* Portfolio Section – allow natural expansion and add extra bottom spacing */
+/* Ensure the portfolio container clears its children */
 .portfolio_area {
-  padding: 120px 0;
-  padding-bottom: 1024px; /* adjust as needed */
-  margin-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 1240px;
+  margin-bottom: 100px; /* Adjust this value to create more space below the section */
   position: relative;
+  overflow: hidden; /* Forces the container to include floated or flex children */
 }
 
-/* Ensure card has a fixed height with units */
+/* Force every portfolio card to have the same fixed height */
 .portfolio_box {
-  height: 600px; /* Fixed height for every card — adjust as needed */
+  height: 600px; /* Set a fixed height for all cards */
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Hide any overflow */
+  overflow: hidden; /* Hide any excess content */
 }
 
 .portfolio-grid {
@@ -4211,29 +4213,33 @@ h6 {
   object-fit: cover;
 }
 
-/* Style the text area so that content is truncated if too long */
+/* Constrain the text area within the card */
 .short_info {
-  flex: 1;
   padding: 20px;
+  flex: 1; /* Fill remaining space */
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
-/* Fix the title area so it doesn't stretch card height */
+/* Fix title area so it never stretches the card */
 .short_info h4 {
   font-size: 18px;
-  margin-bottom: 200px;
-  height: 45px; /* Set a fixed height */
-  line-height: 20px; /* Vertically center if desired */
+  height: 45px; /* Fixed height for the title */
+  line-height: 45px;
+  margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/* Truncate longer text in paragraphs */
+/* Truncate long project descriptions */
 .short_info p {
+  flex: 1; /* Allow text to fill available space without stretching the card */
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Show only 3 lines */
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Show only 3 lines of text */
+  line-clamp: 3; /* Standard property for compatibility */
   overflow: hidden;
   margin-bottom: 15px;
 }
@@ -4244,4 +4250,9 @@ h6 {
     padding: 60px 0;
     margin-bottom: 30px;
   }
+}
+
+.thankyou_area {
+  padding: 60px 0;
+  margin-top: 500px;
 }
