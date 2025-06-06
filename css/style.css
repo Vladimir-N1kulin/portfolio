@@ -4245,11 +4245,21 @@ h6 {
   word-wrap: break-word;
 }
 
-/* Media queries for responsive layout */
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .portfolio_area {
-    padding: 60px 0;
+    padding: 60px 15px; /* reduce padding */
+    padding-bottom: 3400px; /* allow for natural expansion */
     margin-bottom: 30px;
+  }
+  /* Let mobile cards adjust height */
+  .portfolio_box {
+    min-height: auto; /* allow natural growth */
+    margin-bottom: 20px;
+  }
+  /* Optionally, clamp fewer text lines for mobile */
+  .short_info p {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
 }
 
