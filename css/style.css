@@ -4185,7 +4185,7 @@ h6 {
 
 /* Force every portfolio card to have the same fixed height */
 .portfolio_box {
-  height: 600px; /* Set a fixed height for all cards */
+  min-height: 600px; /* Set a fixed height for all cards */
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -4235,13 +4235,14 @@ h6 {
 
 /* Truncate long project descriptions */
 .short_info p {
-  flex: 1; /* Allow text to fill available space without stretching the card */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Show only 3 lines of text */
-  line-clamp: 3; /* Standard property for compatibility */
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
   margin-bottom: 15px;
+  /* Optionally add these for extra robustness */
+  word-wrap: break-word;
 }
 
 /* Media queries for responsive layout */
