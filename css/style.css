@@ -4248,7 +4248,7 @@ h6 {
 @media (max-width: 767px) {
   .portfolio_area {
     padding: 60px 15px; /* reduce padding */
-    padding-bottom: 3400px; /* allow for natural expansion */
+    padding-bottom: 3330px; /* allow for natural expansion */
     margin-bottom: 30px;
   }
   /* Let mobile cards adjust height */
