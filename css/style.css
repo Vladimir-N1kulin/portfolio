@@ -4267,3 +4267,46 @@ h6 {
   padding: 60px 0;
   margin-top: 500px;
 }
+
+.social-icons a i {
+  font-size: 3rem; /* Increase icon size */
+  margin-right: 1rem; /* Add spacing between icons */
+  transition: color 0.3s ease;
+}
+
+/* Set a distinct colour for each icon */
+.social-icons a i.fa-linkedin {
+  color: #ffffff; /* LinkedIn Blue */
+}
+
+.social-icons a i.fa-github {
+  color: #ffffff; /* Dark gray for GitHub */
+}
+
+.social-icons a i.fa-envelope {
+  color: #ffffff; /* Email Red */
+}
+
+/* Optional: change colour on hover */
+.social-icons a:hover i {
+  opacity: 0.8;
+}
+
+/* Center the content within the contact area */
+.contact_area .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Center the row content (for the form and heading) */
+.contact_area .row {
+  justify-content: center;
+}
+
+/* Optionally, center the form itself if needed */
+.contact_area form {
+  margin: 0 auto;
+  width: 100%; /* or a max-width if you don't want it full-width */
+}
