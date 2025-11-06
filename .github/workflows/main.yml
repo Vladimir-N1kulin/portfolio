@@ -18,4 +18,4 @@ jobs:
       - name: Install html5validator
         run: pip install html5validator
       - name: Validate HTML
-        run: html5validator --root . --ignore "Satner Portfolio -doc"
+        run: html5validator --root .
