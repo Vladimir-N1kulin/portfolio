@@ -434,20 +434,36 @@
       });
     </script>
     <!-- Add this script before your closing </body> tag -->
-    <!-- Add this script before your closing </body> tag -->
     <script>
       // Replace with your GitHub username
       const githubUsername = "Vladimir-N1kulin";
       const maxProjects = 6; // How many projects to show
+      const container = document.getElementById("github-projects");
+      
+      // Show loading state
+      container.innerHTML = '<div class="col-12 text-center"><p>Loading projects...</p></div>';
 
-      // In your existing script (located before </body>)
-      fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated`)
-        .then((response) => response.json())
+      // Fetch GitHub repos
+      fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=${maxProjects}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('GitHub API request failed');
+          }
+          return response.json();
+        })
         .then((repos) => {
           const filtered = repos
             .filter((repo) => !repo.fork)
             .slice(0, maxProjects);
-          const container = document.getElementById("github-projects");
+          
+          // Clear loading message
+          container.innerHTML = '';
+          
+          if (filtered.length === 0) {
+            container.innerHTML = '<div class="col-12 text-center"><p>No projects found.</p></div>';
+            return;
+          }
+          
           filtered.forEach((repo) => {
             const imgSrc = "img/VN_logo.png"; // default logo for each project
 
@@ -488,8 +504,15 @@
           });
         })
         .catch((error) => {
-          document.getElementById("github-projects").innerHTML =
-            "<p>Unable to load projects from GitHub.</p>";
+          console.error('GitHub API Error:', error);
+          container.innerHTML = `
+            <div class="col-12 text-center">
+              <p>Unable to load projects. Please try again later.</p>
+              <a href="https://github.com/${githubUsername}" class="primary_btn" target="_blank">
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          `;
         });
     </script>
   </body>

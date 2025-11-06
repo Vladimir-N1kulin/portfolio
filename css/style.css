@@ -4247,8 +4247,7 @@ h6 {
 
 @media (max-width: 767px) {
   .portfolio_area {
-    padding: 60px 15px; /* reduce padding */
-    padding-bottom: 3330px; /* allow for natural expansion */
+    padding: 60px 15px 60px; /* Fixed mobile padding */
     margin-bottom: 30px;
   }
   /* Let mobile cards adjust height */
@@ -4261,6 +4260,25 @@ h6 {
     -webkit-line-clamp: 2;
     line-clamp: 2;
   }
+}
+
+/* Quick Wins: UX Improvements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve button hover states */
+.primary_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Add focus states for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #854fee;
+  outline-offset: 2px;
 }
 
 .thankyou_area {
