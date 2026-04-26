@@ -214,8 +214,46 @@ button:focus {
 
 /* End Gradient Area css
 ============================================================================================ */
+/* Site logo */
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.site-logo-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4458dc 0%, #854fee 100%);
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.site-logo-name {
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+
+.site-logo:hover .site-logo-name {
+  color: #854fee;
+}
+
 .primary_btn {
   display: inline-block;
+  -webkit-appearance: none;
+  appearance: none;
   color: #fff;
   letter-spacing: 0px;
   font-family: "Rubik", sans-serif;
@@ -4173,26 +4211,21 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
-/* Portfolio Section – allow natural expansion and add extra bottom spacing */
-/* Ensure the portfolio container clears its children */
+/* Portfolio Section */
 .portfolio_area {
-  padding-top: 120px;
-  padding-bottom: 1240px;
-  margin-bottom: 100px; /* Adjust this value to create more space below the section */
+  padding: 120px 0;
   position: relative;
-  overflow: hidden; /* Forces the container to include floated or flex children */
 }
 
-/* Force every portfolio card to have the same fixed height */
+/* Portfolio card */
 .portfolio_box {
-  min-height: 600px; /* Set a fixed height for all cards */
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Hide any excess content */
+  overflow: hidden;
 }
 
 .portfolio-grid {
@@ -4247,8 +4280,7 @@ h6 {
 
 @media (max-width: 767px) {
   .portfolio_area {
-    padding: 60px 15px 60px; /* Fixed mobile padding */
-    margin-bottom: 30px;
+    padding: 60px 15px;
   }
   /* Let mobile cards adjust height */
   .portfolio_box {
@@ -4283,7 +4315,6 @@ button:focus {
 
 .thankyou_area {
   padding: 60px 0;
-  margin-top: 500px;
 }
 
 .social-icons a i {
@@ -4316,17 +4347,6 @@ button:focus {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-/* Center the row content (for the form and heading) */
-.contact_area .row {
-  justify-content: center;
-}
-
-/* Optionally, center the form itself if needed */
-.contact_area form {
-  margin: 0 auto;
-  width: 100%; /* or a max-width if you don't want it full-width */
 }
 
 /* Skills Section Styles */
@@ -4395,8 +4415,466 @@ button:focus {
   .skills_area {
     padding: 80px 0;
   }
-  
+
   .skill_card {
     margin-bottom: 30px;
   }
+}
+
+/* ============================================================
+   Contact Page — Redesign
+   ============================================================ */
+
+/* Hero */
+.contact-hero {
+  background: linear-gradient(135deg, #4458dc 0%, #854fee 100%);
+  padding: 80px 0;
+  color: #fff;
+}
+
+.contact-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  font-family: "Rubik", sans-serif;
+}
+
+.contact-hero-text p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  max-width: 400px;
+}
+
+.contact-hero-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.hero-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  min-width: 150px;
+  cursor: pointer;
+}
+
+.hero-link-btn i {
+  font-size: 16px;
+}
+
+.hero-link-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Body */
+.contact-body {
+  background: #f4f5fb;
+}
+
+/* Two-column layout */
+.contact-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.contact-sidebar {
+  flex: 0 0 340px;
+}
+
+.contact-form-side {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-sidebar h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.contact-intro {
+  font-size: 15px;
+  line-height: 27px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Contact info items */
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  padding: 18px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(132, 79, 238, 0.15);
+}
+
+.contact-item-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4458dc 0%, #854fee 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+.contact-item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #999;
+}
+
+.contact-item-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+/* Form card */
+.contact-form-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 44px 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #222;
+}
+
+.cf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cf-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.cf-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.cf-group input,
+.cf-group textarea {
+  border: 1.5px solid #e8e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background: #fafafa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  resize: none;
+}
+
+.cf-group input:focus,
+.cf-group textarea:focus {
+  border-color: #854fee;
+  box-shadow: 0 0 0 3px rgba(132, 79, 238, 0.1);
+  background: #fff;
+}
+
+.cf-group input::placeholder,
+.cf-group textarea::placeholder {
+  color: #bbb;
+}
+
+.cf-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #4458dc 0%, #854fee 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  margin-top: 4px;
+}
+
+.cf-submit:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .contact-sidebar {
+    flex: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .contact-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-hero-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cf-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .contact-hero {
+    padding: 60px 0 50px;
+  }
+}
+
+/* ============================================================
+   Home — Contact Section
+   ============================================================ */
+.home-contact-section {
+  background: linear-gradient(135deg, #4458dc 0%, #854fee 100%);
+  padding: 80px 0;
+}
+
+.home-contact-inner {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.home-contact-text {
+  flex: 0 0 300px;
+  color: #fff;
+  padding-top: 8px;
+}
+
+.home-contact-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.home-contact-text p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 26px;
+  margin: 0 0 28px;
+}
+
+.home-contact-social {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.home-social-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-contact-form {
+  flex: 1;
+  min-width: 0;
+}
+
+.hcf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Override cf-group colours for dark background */
+.home-contact-form .cf-group label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.home-contact-form .cf-group input,
+.home-contact-form .cf-group textarea {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.home-contact-form .cf-group input::placeholder,
+.home-contact-form .cf-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.home-contact-form .cf-group input:focus,
+.home-contact-form .cf-group textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.home-contact-form .cf-submit {
+  background: #fff;
+  color: #4458dc;
+}
+
+.home-contact-form .cf-submit:hover {
+  opacity: 0.92;
+}
+
+@media (max-width: 991px) {
+  .home-contact-inner {
+    flex-direction: column;
+  }
+
+  .home-contact-text {
+    flex: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .hcf-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   Email Modal
+   ============================================================ */
+.email-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.email-modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.email-modal h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.email-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.email-modal-close:hover {
+  color: #333;
 }
