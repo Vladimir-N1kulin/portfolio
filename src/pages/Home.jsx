@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
 
+const base = import.meta.env.BASE_URL
+
 const certifications = [
-  { src: '/img/certifications/Coursera%20GXDPEJPN8MT3_page-0001.jpg', alt: 'Azure Certified' },
-  { src: '/img/certifications/Coursera%20NCB7WBW6FKP3_page-0001.jpg', alt: 'C# Certified' },
-  { src: '/img/certifications/1639196_822854.en_page-0001.jpg', alt: 'Python Certified' },
-  { src: '/img/certifications/ethics_at_work_page-0001.jpg', alt: 'Ethics at Work' },
-  { src: '/img/certifications/mindfulness_page-0001.jpg', alt: 'Mindfulness' },
-  { src: '/img/certifications/Vladimir_Nikulin20249164923_page-0001.jpg', alt: 'Certificate' },
+  { src: `${base}img/certifications/Coursera%20GXDPEJPN8MT3_page-0001.jpg`, alt: 'Azure Certified' },
+  { src: `${base}img/certifications/Coursera%20NCB7WBW6FKP3_page-0001.jpg`, alt: 'C# Certified' },
+  { src: `${base}img/certifications/1639196_822854.en_page-0001.jpg`, alt: 'Python Certified' },
+  { src: `${base}img/certifications/ethics_at_work_page-0001.jpg`, alt: 'Ethics at Work' },
+  { src: `${base}img/certifications/mindfulness_page-0001.jpg`, alt: 'Mindfulness' },
+  { src: `${base}img/certifications/Vladimir_Nikulin20249164923_page-0001.jpg`, alt: 'Certificate' },
 ]
 
 const skills = [
@@ -93,7 +95,7 @@ export default function Home() {
                   <h5 className="text-uppercase">Software Engineer</h5>
                   <div className="d-flex align-items-center">
                     <button className="primary_btn" onClick={() => document.getElementById('home-contact')?.scrollIntoView({ behavior: 'smooth' })}><span>Hire Me</span></button>
-                    <a className="primary_btn tr-bg" href="/cv/Vladimir_Nikulin_CV.pdf" download>
+                    <a className="primary_btn tr-bg" href={`${base}cv/Vladimir_Nikulin_CV.pdf`} download>
                       <span>Get CV</span>
                     </a>
                   </div>
@@ -101,7 +103,7 @@ export default function Home() {
               </div>
               <div className="col-lg-5">
                 <div className="home_right_img">
-                  <img src="/img/banner/home-right.png" alt="Vladimir Nikulin - Software Engineer" />
+                  <img src={`${base}img/banner/home-right.png`} alt="Vladimir Nikulin - Software Engineer" />
                 </div>
               </div>
             </div>
@@ -115,7 +117,7 @@ export default function Home() {
           <div className="row justify-content-start align-items-center">
             <div className="col-lg-5">
               <div className="about_img">
-                <img src="/img/about-us.png" alt="About Vladimir Nikulin" />
+                <img src={`${base}img/about-us.png`} alt="About Vladimir Nikulin" />
               </div>
             </div>
             <div className="offset-lg-1 col-lg-5">
@@ -135,7 +137,7 @@ export default function Home() {
                   SQL Server, and Git/GitHub, write testable and secure code, and tune prompts and JSON schemas to
                   ship reliable, measurable results.
                 </p>
-                <a className="primary_btn" href="/cv/Vladimir_Nikulin_CV.pdf">
+                <a className="primary_btn" href={`${base}cv/Vladimir_Nikulin_CV.pdf`}>
                   <span>Download CV</span>
                 </a>
               </div>
@@ -286,7 +288,7 @@ export default function Home() {
                 <div key={repo.id} className="col-lg-4 col-md-6 mb-4">
                   <div className="portfolio_box mb-4">
                     <div className="single_portfolio position-relative">
-                      <img className="img-fluid w-100 rounded-top" src="/img/VN_logo.png" alt={repo.name} />
+                      <img className="img-fluid w-100 rounded-top" src={`${base}img/VN_logo.png`} alt={repo.name} />
                       <a
                         href={repo.html_url}
                         target="_blank"
